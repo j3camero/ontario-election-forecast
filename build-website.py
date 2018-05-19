@@ -55,6 +55,9 @@ if os.path.exists('build'):
     shutil.rmtree('build')
 os.mkdir('build')
 
+# Move static files.
+shutil.copyfile('style.css', 'build/style.css')
+
 # First pass through the riding forecasts to calculate seat totals.
 projected_seats = {}
 hypothetical_seats = {}
